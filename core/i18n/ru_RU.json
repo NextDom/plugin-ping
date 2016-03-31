@@ -1,0 +1,30 @@
+{
+    "plugins/ping/desktop/php/ping.php": {
+        "Général": "Главная",
+        "Nom de l'équipement": "Название оборудования",
+        "Objet parent": "Родительский объект",
+        "Aucun": "Нет",
+        "Catégorie": "Категория",
+        "Activer": "Активировать",
+        "Visible": "Видимый",
+        "IP de l'équipement": "IP оборудование",
+        "Indicateurs": "Индикаторы",
+        "Nom": "Имя",
+        "Icône-action": "Иконка Действие",
+        "Sous-Type": "Под-Тип",
+        "Paramètres": "Параметры",
+        "Action": "Действие",
+        "Supprimer": "Удалить",
+        "Sauvegarder": "Сохранить",
+        "Mes Pings": "Мои пинги",
+        "Port TCP": "Порт TCP",
+        "Vous n'avez pas encore de ping, cliquez sur Ajouter un équipement pour commencer": "У вас пока нет Ping, нажмите кнопку Добавить устройство, чтобы начать",
+        "Ajouter un Ping": "Добавить Ping"
+    },
+    "plugins/ping/desktop/js/ping.js": {
+        "Nom": "Имя",
+        "Historiser": "История",
+        "Afficher": "Отобразить",
+        "Tester": "Тест"
+    }
+}

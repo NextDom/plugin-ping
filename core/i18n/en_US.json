@@ -1,0 +1,30 @@
+{
+    "plugins/ping/desktop/php/ping.php": {
+        "Général": "Main",
+        "Nom de l'équipement": "Equipment name",
+        "Objet parent": "Parent object",
+        "Aucun": "None",
+        "Catégorie": "Category",
+        "Activer": "Activate",
+        "Visible": "Visible",
+        "IP de l'équipement": "Device IP",
+        "Indicateurs": "Indicators",
+        "Nom": "Name",
+        "Icône-action": "Icon-action",
+        "Sous-Type": "Sub-type",
+        "Paramètres": "Settings",
+        "Action": "Action",
+        "Supprimer": "Delete",
+        "Sauvegarder": "Save",
+        "Mes Pings": "My Pings",
+        "Port TCP": "TCP port",
+        "Vous n'avez pas encore de ping, cliquez sur Ajouter un équipement pour commencer": "You don't have any ping. Click on \"Add an equipment\" to start.",
+        "Ajouter un Ping": "Add a Ping"
+    },
+    "plugins/ping/desktop/js/ping.js": {
+        "Nom": "Name",
+        "Historiser": "Record history",
+        "Afficher": "Display",
+        "Tester": "Test"
+    }
+}

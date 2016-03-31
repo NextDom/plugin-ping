@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<info>
+    <id>ping</id>
+    <name>Ping</name>
+    <description>Plugin de test d'un équipement réseau (Ping, Arp et test de service)</description>
+    <icon>fa fa-download</icon>
+    <licence>AGPL</licence>
+    <author>Thomas Guenneguez</author>
+    <require>1.124.0</require>
+	<installation>&lt;ul&gt;&lt;li&gt;Pour les commandes pings :
+Ajouter la ligne :
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;www-data ALL=NOPASSWD: /bin/ping&lt;br&gt;&lt;/li&gt;
+&lt;li&gt;Pour les commandes arp :
+sudo apt-get install arp-scan
+sudo visudo -s
+Ajouter la ligne :
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;www-data ALL=NOPASSWD: /usr/bin/arp-scan&lt;/li&gt;&lt;/ul&gt;</installation>
+    <version>1.5</version>
+    <category>communication</category>
+</info>
+

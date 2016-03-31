@@ -1,0 +1,30 @@
+{
+    "plugins/ping/desktop/php/ping.php": {
+        "Général": "General",
+        "Nom de l'équipement": "Nombre del equipo",
+        "Objet parent": "Objeto padre",
+        "Aucun": "Ningún",
+        "Catégorie": "Categoría",
+        "Activer": "Activar",
+        "Visible": "Visible",
+        "IP de l'équipement": "IP del equipamiento",
+        "Indicateurs": "Indicadores",
+        "Nom": "Nombre",
+        "Icône-action": "Icono-acción",
+        "Sous-Type": "Sub-Tipo",
+        "Paramètres": "Parámetros",
+        "Action": "Acción",
+        "Supprimer": "Borrar",
+        "Sauvegarder": "Guardar",
+        "Mes Pings": "Mis Pings",
+        "Port TCP": "Puerto TCP",
+        "Vous n'avez pas encore de ping, cliquez sur Ajouter un équipement pour commencer": "Todavía no tiene ping, haga clic en Añadir un equipamiento para comenzar",
+        "Ajouter un Ping": "Añadir Ping"
+    },
+    "plugins/ping/desktop/js/ping.js": {
+        "Nom": "Nombre",
+        "Historiser": "Historizar",
+        "Afficher": "Mostrar",
+        "Tester": "Probar"
+    }
+}

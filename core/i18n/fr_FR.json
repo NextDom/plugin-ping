@@ -1,0 +1,30 @@
+{
+    "plugins\/ping\/desktop\/php\/ping.php": {
+        "Général": "Général",
+        "Nom de l'équipement": "Nom de l'équipement",
+        "Objet parent": "Objet parent",
+        "Aucun": "Aucun",
+        "Catégorie": "Catégorie",
+        "Activer": "Activer",
+         "Visible": "Visible",
+        "IP de l'équipement": "IP de l'équipement",
+        "Indicateurs": "Indicateurs",
+        "Nom": "Nom",
+        "Icône-action": "Icône-action",
+        "Sous-Type": "Sous-Type",
+        "Paramètres": "Paramètres",
+        "Action": "Action",
+        "Supprimer": "Supprimer",
+        "Sauvegarder": "Sauvegarder",
+        "Mes Pings": "Mes Pings",
+        "Port TCP": "Port TCP",
+        "Vous n'avez pas encore de ping, cliquez sur Ajouter un équipement pour commencer": "Vous n'avez pas encore de ping, cliquez sur Ajouter un équipement pour commencer",
+        "Ajouter un Ping": "Ajouter un Ping"
+    },
+    "plugins\/ping\/desktop\/js\/ping.js": {
+        "Nom": "Nom",
+        "Historiser": "Historiser",
+        "Afficher": "Afficher",
+        "Tester": "Tester"
+    }
+}

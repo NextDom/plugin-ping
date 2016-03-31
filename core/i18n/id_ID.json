@@ -1,0 +1,30 @@
+{
+    "plugins/ping/desktop/php/ping.php": {
+        "Général": "Umum",
+        "Nom de l'équipement": "Nama peralatan",
+        "Objet parent": "Objek induk",
+        "Aucun": "Tak ada",
+        "Catégorie": "Kategori",
+        "Activer": "Mengaktifkan",
+        "Visible": "Terlihat",
+        "IP de l'équipement": "IP de l'équipement",
+        "Indicateurs": "Indicateurs",
+        "Nom": "Nama",
+        "Icône-action": "Icône-action",
+        "Sous-Type": "Subtipe",
+        "Paramètres": "Parameter²",
+        "Action": "Tindakan",
+        "Supprimer": "Menghapus",
+        "Sauvegarder": "Menyimpan",
+        "Mes Pings": "Mes Pings",
+        "Port TCP": "Port TCP",
+        "Vous n'avez pas encore de ping, cliquez sur Ajouter un équipement pour commencer": "Vous n'avez pas encore de ping, cliquez sur Ajouter un équipement pour commencer",
+        "Ajouter un Ping": "Ajouter un Ping"
+    },
+    "plugins/ping/desktop/js/ping.js": {
+        "Nom": "Nama",
+        "Historiser": "Historicize",
+        "Afficher": "Memenitikan",
+        "Tester": "Coba"
+    }
+}

@@ -1,0 +1,12 @@
+[horizontal]
+1.5:: Ajout de cron indépendante
+
+1.4:: Correction pour que le mode de ping soit bien affiché
+
+1.3:: Prise en compte de l'interface bond0 pour les mini+
+
+1.2:: Prise en compte du ping et requête Arp pour les plateformes supportantes
+
+1.1:: Possibilité de mettre un port sous forme numerique
+
+1.0:: Première version bêta
