@@ -15,7 +15,7 @@ sudo apt-get install arp-scan
 sudo visudo -s
 Ajouter la ligne :
 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;www-data ALL=NOPASSWD: /usr/bin/arp-scan&lt;/li&gt;&lt;/ul&gt;</installation>
-    <version>1.5</version>
+    <version>1.6</version>
     <category>communication</category>
 </info>
 

@@ -269,7 +269,7 @@ class ping extends eqLogic {
     }
 
     public static function GetArpCmd() {
-		foreach(array('sudo /usr/bin/arp-scan -l', 'sudo /usr/bin/arp-scan -l bond0') as $cmd)
+		foreach(array('sudo /usr/bin/arp-scan -l', 'sudo /usr/bin/arp-scan -I bond0 -l', 'sudo /usr/bin/arp-scan -I docker0 -l') as $cmd)
 		{
 			log::add('ping','debug','Essai la commande pour arp :'.$cmd);
 			unset($return);

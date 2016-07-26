@@ -1,4 +1,6 @@
 [horizontal]
+1.6:: Prise en charge de docker
+
 1.5:: Ajout de cron indépendante
 
 1.4:: Correction pour que le mode de ping soit bien affiché
