@@ -41,12 +41,15 @@ class ping extends eqLogic {
 
 	public function preUpdate()
 	{
+		if ( $this->getConfiguration('mode') == '' ) {
+			$this->setConfiguration('mode', 'Tcp');
+		}
 		switch ($this->getConfiguration('mode')) {
 			case "Tcp":
 				if ( ! preg_match("/^[0-9]*$/", $this->getConfiguration('port')) )
 				{
 					$port = getservbyname (strtolower($this->getConfiguration('port')), 'tcp');
-					if ( ! is_int($port) )
+					if ( ! preg_match('![0-9]*!',($port)) )
 					{
 						ajax::error(__('Erreur de Port (getservbyname)', __FILE__));
 						return false;
@@ -71,13 +74,6 @@ class ping extends eqLogic {
 				}
 				break;
 		}
-	}
-
- 	public function postUpdate()
-	{
-		if ( $this->getConfiguration('mode') == '' ) {
-			$this->setConfiguration('mode', 'Tcp');
-		}
 		$cmd = $this->getCmd(null, 'state');
 		if ( ! is_object($cmd)) {
 			$cmd = new pingCmd();
@@ -89,23 +85,44 @@ class ping extends eqLogic {
 			$cmd->setSubType('binary');
 			$cmd->setIsHistorized(0);
 			$cmd->setEventOnly(1);
+			$cmd->setDisplay('icon','<i class="icon techno-freebox"></i>');
+			$cmd->setDisplay('generic_type','GENERIC_INFO');
 			$cmd->save();		
 		}
-		$cmd = $this->getCmd(null, 'delai');
-		if ( ! is_object($cmd)) {
-			$cmd = new pingCmd();
-			$cmd->setName('Delai');
-			$cmd->setEqLogic_id($this->getId());
-			$cmd->setLogicalId('delai');
-			$cmd->setType('info');
-			$cmd->setUnite('ms');
-			$cmd->setSubType('numeric');
-			$cmd->setIsHistorized(0);
-			$cmd->setEventOnly(1);
-			$cmd->save();		
-		} else {
-			$cmd->setUnite('ms');
-			$cmd->save();		
+		else
+		{
+			if ( $cmd->getDisplay('generic_type') == "" )
+			{
+				$cmd->setDisplay('icon','<i class="icon techno-freebox"></i>');
+				$cmd->setDisplay('generic_type','GENERIC_INFO');
+				$cmd->save();
+			}
+		}
+		
+		if ( $this->getConfiguration('mode') != 'Arp' ) {
+			$cmd = $this->getCmd(null, 'delai');
+			if ( ! is_object($cmd)) {
+				$cmd = new pingCmd();
+				$cmd->setName('Delai');
+				$cmd->setEqLogic_id($this->getId());
+				$cmd->setLogicalId('delai');
+				$cmd->setType('info');
+				$cmd->setUnite('µs');
+				$cmd->setSubType('numeric');
+				$cmd->setIsHistorized(0);
+				$cmd->setEventOnly(1);
+				$cmd->setDisplay('icon','<i class="icon techno-courbes"></i>');
+				$cmd->setDisplay('generic_type','GENERIC_INFO');
+				$cmd->save();		
+			} else {
+				$cmd->setUnite('µs');
+				if ( $cmd->getDisplay('generic_type') == "" )
+				{
+					$cmd->setDisplay('icon','<i class="icon techno-courbes"></i>');
+					$cmd->setDisplay('generic_type','GENERIC_INFO');
+				}
+				$cmd->save();		
+			}
 		}
 		$cmd = $this->getCmd(null, 'ping');
 		if ( ! is_object($cmd) ) {
@@ -116,7 +133,28 @@ class ping extends eqLogic {
 			$cmd->setSubType('other');
 			$cmd->setLogicalId('ping');
 			$cmd->setEventOnly(1);
+			$cmd->setDisplay('icon','<i class="icon techno-fleches"></i>');
+			$cmd->setDisplay('generic_type','GENERIC_ACTION');
 			$cmd->save();
+		}
+		else
+		{
+			if ( $cmd->getDisplay('generic_type') == "" )
+			{
+				$cmd->setDisplay('icon','<i class="icon techno-fleches"></i>');
+				$cmd->setDisplay('generic_type','GENERIC_ACTION');
+				$cmd->save();
+			}
+		}
+	}
+
+	public function postUpdate()
+	{
+		if ( $this->getConfiguration('mode') == 'Arp' ) {
+			$cmd = $this->getCmd(null, 'delai');
+			if ( is_object($cmd)) {
+				$cmd->remove();
+			}
 		}
 	}
 
@@ -133,6 +171,8 @@ class ping extends eqLogic {
 			$cmd->setSubType('binary');
 			$cmd->setIsHistorized(0);
 			$cmd->setEventOnly(1);
+			$cmd->setDisplay('icon','<i class="icon techno-freebox"></i>');
+			$cmd->setDisplay('generic_type','GENERIC_INFO');
 			$cmd->save();		
 		}
 		$cmd = $this->getCmd(null, 'ping');
@@ -144,6 +184,8 @@ class ping extends eqLogic {
 			$cmd->setSubType('other');
 			$cmd->setLogicalId('ping');
 			$cmd->setEventOnly(1);
+			$cmd->setDisplay('icon','<i class="icon techno-fleches"></i>');
+			$cmd->setDisplay('generic_type','GENERIC_ACTION');
 			$cmd->save();
 		}
 		$cmd = $this->getCmd(null, 'delai');
@@ -152,11 +194,13 @@ class ping extends eqLogic {
 			$cmd->setName('Delai');
 			$cmd->setEqLogic_id($this->getId());
 			$cmd->setLogicalId('delai');
-			$cmd->setUnite('ms');
+			$cmd->setUnite('µs');
 			$cmd->setType('info');
 			$cmd->setSubType('numeric');
 			$cmd->setIsHistorized(0);
 			$cmd->setEventOnly(1);
+			$cmd->setDisplay('icon','<i class="icon techno-courbes"></i>');
+			$cmd->setDisplay('generic_type','GENERIC_INFO');
 			$cmd->save();		
 		}
 	}
@@ -170,7 +214,8 @@ class ping extends eqLogic {
 			log::add('ping','debug','mode : '.$this->getConfiguration('mode'));
 			switch ($this->getConfiguration('mode')) {
 				case "Tcp":
-					if ( ! is_int($this->getConfiguration('port')) )
+					log::add('ping','debug',"Test ".$this->getConfiguration('ip')." => ".$this->getConfiguration('port'));
+					if ( ! preg_match('![0-9]*!',$this->getConfiguration('port')) )
 					{
 						$port = getservbyname(strtolower($this->getConfiguration('port')), 'tcp');
 					}
@@ -178,8 +223,19 @@ class ping extends eqLogic {
 					{
 						$port = $this->getConfiguration('port');
 					}
+					if ( ! ereg("^[1-9][0-9]{0,2}\.[0-9]{0,3}\.[0-9]{0,3}\.[0-9]{0,3}$", $this->getConfiguration('ip')) )
+					{
+						$ip = gethostbyname($this->getConfiguration('ip'));
+					}
+					else
+					{
+						$ip = $this->getConfiguration('ip');
+					}
+					log::add('ping','debug',"Test reel ".$ip." => ".$port);
 					$ts = microtime(true);
-					$socket = @fsockopen(gethostbyname($this->getConfiguration('ip')), $port, $errno, $errstr, 30);
+					$socket = @fsockopen($ip, $port, $errno, $errstr, 30);
+					$tf = microtime(true);
+					$dure = round(($tf - $ts) * 1000000);
 					 
 					if( $socket === false ) {
 						log::add('ping','debug',"Error ".$errno." => ".$errstr);
@@ -189,8 +245,8 @@ class ping extends eqLogic {
 						}
 					} else {
 						$delaicmd->setCollectDate('');
-						log::add('ping','debug','Ok in '.((microtime(true) - $ts ) / 1000));
-						$delaicmd->event((microtime(true) - $ts ) / 1000);
+						log::add('ping','debug','Ok in '.$dure.' µs');
+						$delaicmd->event($dure);
 						if ($statuscmd->execCmd() != 1) {
 							$statuscmd->setCollectDate('');
 							$statuscmd->event(1);
@@ -199,7 +255,7 @@ class ping extends eqLogic {
 					}
 					break;
 				case "Icmp":
-					$lastligne = exec(config::byKey('cmd_ping', 'ping').' '.gethostbyname($this->getConfiguration('ip')).' 2>&1', $return, $code);
+					$lastligne = exec(config::byKey('cmd_ping', 'ping').' '.$this->getConfiguration('ip').' 2>&1', $reurn, $code);
 					if ( $code == 0 )
 					{
 						log::add('ping','debug','Code :'.$code.' - Ok');
@@ -209,8 +265,8 @@ class ping extends eqLogic {
 						}
 						if ( preg_match('!rtt min/avg/max/mdev = [0-9\.]*/([0-9\.]*)/[0-9\.]*/[0-9\.]* ms!', $lastligne, $matches) ) {
 							$delaicmd->setCollectDate('');
-							log::add('ping','debug','Delai : '.$matches[1]);
-							$delaicmd->event($matches[1]);
+							log::add('ping','debug','Delai : '.($matches[1] * 1000)." µs");
+							$delaicmd->event(($matches[1] * 1000));
 						} else {
 							log::add('ping','debug','Delai introuvable : '.$lastligne);
 						}
@@ -222,8 +278,8 @@ class ping extends eqLogic {
 						}
 						if ( preg_match('!rtt min/avg/max/mdev = [0-9\.]*/([0-9\.]*)/[0-9\.]*/[0-9\.]* ms!', $lastligne, $matches) ) {
 							$delaicmd->setCollectDate('');
-							log::add('ping','debug','Delai : '.$matches[1]);
-							$delaicmd->event($matches[1]);
+							log::add('ping','debug','Delai : '.($matches[1] * 1000)." µs");
+							$delaicmd->event($matches[1] * 1000);
 						} else {
 							log::add('ping','debug','Delai introuvable : '.$lastligne);
 						}

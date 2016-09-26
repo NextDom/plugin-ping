@@ -48,7 +48,6 @@ function ping_update() {
         $cron->save();
 	}
 	foreach (eqLogic::byType('ping') as $eqLogic) {
-		$eqLogic->postUpdate();
 		$eqLogic->save();
 	}
 }

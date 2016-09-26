@@ -10,15 +10,15 @@ function addCmdToTable(_cmd) {
         var tr = '<tr class="cmd" data-cmd_id="' + init(_cmd.id) + '" >';
         tr += '<td>';
         tr += '<span class="cmdAttr" data-l1key="id"></span>';
-        tr += '</td>';
-        tr += '<td>';
         tr += '<input class="cmdAttr form-control input-sm" data-l1key="name" placeholder="{{Nom}}"></td>';
 		tr += '</td>';
 		tr += '<td>';
+		tr += '<a class="cmdAction btn btn-default btn-sm" data-l1key="chooseIcon"><i class="fa fa-flag"></i> Icone</a>';
+		tr += '<span class="cmdAttr cmdAction" data-l1key="display" data-l2key="icon" style="margin-left : 10px;"></span>';
         tr += '</td>';
 		tr += '<td class="expertModeVisible">';
         tr += '<input class="cmdAttr form-control type input-sm" data-l1key="type" value="action" disabled style="margin-bottom : 5px;" />';
-        tr += '<span class="subType" subType="' + init(_cmd.subType) + '"></span>';
+        tr += '<span class="cmdAttr subType" subType="' + init(_cmd.subType) + '"></span>';
 		tr += '<input type=hidden class="cmdAttr form-control input-sm" data-l1key="unite" value="">';
         tr += '</td>';
         tr += '<td>';
@@ -42,8 +42,6 @@ function addCmdToTable(_cmd) {
         var tr = '<tr class="cmd" data-cmd_id="' + init(_cmd.id) + '">';
         tr += '<td>';
         tr += '<span class="cmdAttr" data-l1key="id"></span>';
-        tr += '</td>';
-        tr += '<td>';
         tr += '<input class="cmdAttr form-control input-sm" data-l1key="name" placeholder="{{Nom}}">';
 		tr += '</td>';
         tr += '<td>';
