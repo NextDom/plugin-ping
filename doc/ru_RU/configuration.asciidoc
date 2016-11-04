@@ -1,0 +1,15 @@
+Nous allons maintenant paramétrer l'équipement. Pour se faire, cliquer sur *Plugins / Communicaton / ping*
+
+Puis définir :
+
+- Objet parent
+- Catégorie (optionnelle)
+- Activer (coché par défaut)
+- Visible (optionel si vous ne désirez pas le rendre visible sur le Dashboard)
+- Mode de ping (Icmp, Arp, Tcp)
+- Adresse Mac a pinger
+- IP a pinger
+- Port a pinger
+
+image::../images/ping_screenshot2.jpg[align="center"]
+Et pour finir, cliquer sur Sauvegarder

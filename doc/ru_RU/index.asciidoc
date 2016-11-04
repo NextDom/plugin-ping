@@ -1,0 +1,31 @@
+== Ping
+
+=== Présentation
+Ce plugin permet de pinguer un équipement en TCP, ICMP et ARP.
+Il permet donc de tester des services genre http, mysql, smb, ...
+[http://fr.wikipedia.org/wiki/Liste_de_ports_logiciels Liste complète]
+
+image::../images/ping_screenshot1.jpg[align="center"]
+
+==== Installation :
+Le plugin détecte automatiquement les commandes disponibles pour les requêtes ARP et le ping ICMP
+
+image::../images/ping_screenshot3.jpg[align="center"]
+
+==== Informations visibles :
+[horizontal]
+- *Etat du ping* : état du ping
+- *Delai* : Delai de réponse au ping en µs
+
+==== Actions possibles :
+[horizontal]
+- *ping* : Force un ping.
+
+=== Installation/Configuration
+include::configuration.asciidoc[]
+
+=== FAQ
+include::faq.asciidoc[]
+
+=== Changelog
+include::changelog.asciidoc[]

@@ -1,30 +1,30 @@
 {
-    "plugins/ping/desktop/php/ping.php": {
-        "Général": "Allgemein",
-        "Nom de l'équipement": "Gerätename",
-        "Objet parent": "Eltern-Objekt",
-        "Aucun": "Keine",
-        "Catégorie": "Kategorie",
-        "Activer": "aktivieren",
-        "Visible": "Sichtbar",
-        "IP de l'équipement": "Geräte IP",
-        "Indicateurs": "Indikatoren",
-        "Nom": "Name",
-        "Icône-action": "Aktionsymbol",
-        "Sous-Type": "Untertyp",
-        "Paramètres": "Parameter",
-        "Action": "Aktion",
-        "Supprimer": "Löschen",
-        "Sauvegarder": "Speichern",
-        "Mes Pings": "Meine Pings",
-        "Port TCP": "TCP Port",
-        "Vous n'avez pas encore de ping, cliquez sur Ajouter un équipement pour commencer": "Sie verfügen nicht über ein Ping Gerät, klicken Sie auf Gerät hinzufügen, um zu starten",
-        "Ajouter un Ping": "Ping hinzufügen"
+    "plugins\/ping\/desktop\/php\/ping.php": {
+        "Général": "Général",
+        "Nom de l'équipement": "Nom de l'équipement",
+        "Objet parent": "Objet parent",
+        "Aucun": "Aucun",
+        "Catégorie": "Catégorie",
+        "Activer": "Activer",
+         "Visible": "Visible",
+        "IP de l'équipement": "IP de l'équipement",
+        "Indicateurs": "Indicateurs",
+        "Nom": "Nom",
+        "Icône-action": "Icône-action",
+        "Sous-Type": "Sous-Type",
+        "Paramètres": "Paramètres",
+        "Action": "Action",
+        "Supprimer": "Supprimer",
+        "Sauvegarder": "Sauvegarder",
+        "Mes Pings": "Mes Pings",
+        "Port TCP": "Port TCP",
+        "Vous n'avez pas encore de ping, cliquez sur Ajouter un équipement pour commencer": "Vous n'avez pas encore de ping, cliquez sur Ajouter un équipement pour commencer",
+        "Ajouter un Ping": "Ajouter un Ping"
     },
-    "plugins/ping/desktop/js/ping.js": {
-        "Nom": "Name",
-        "Historiser": "historisieren",
-        "Afficher": "anzeigen",
-        "Tester": "Test"
+    "plugins\/ping\/desktop\/js\/ping.js": {
+        "Nom": "Nom",
+        "Historiser": "Historiser",
+        "Afficher": "Afficher",
+        "Tester": "Tester"
     }
 }
