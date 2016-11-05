@@ -1,30 +1,30 @@
 {
     "plugins\/ping\/desktop\/php\/ping.php": {
-        "Général": "Général",
-        "Nom de l'équipement": "Nom de l'équipement",
-        "Objet parent": "Objet parent",
-        "Aucun": "Aucun",
-        "Catégorie": "Catégorie",
-        "Activer": "Activer",
+        "Général": "General",
+        "Nom de l'équipement": "Name of the equipment",
+        "Objet parent": "Parent object",
+        "Aucun": "None",
+        "Catégorie": "Category",
+        "Activer": "Enable",
          "Visible": "Visible",
-        "IP de l'équipement": "IP de l'équipement",
-        "Indicateurs": "Indicateurs",
-        "Nom": "Nom",
-        "Icône-action": "Icône-action",
-        "Sous-Type": "Sous-Type",
-        "Paramètres": "Paramètres",
+        "IP de l'équipement": "Equipment IP",
+        "Indicateurs": "Indicators",
+        "Nom": "Name",
+        "Icône-action": "Icon action",
+        "Sous-Type": "Sub-type",
+        "Paramètres": "Settings",
         "Action": "Action",
-        "Supprimer": "Supprimer",
-        "Sauvegarder": "Sauvegarder",
-        "Mes Pings": "Mes Pings",
-        "Port TCP": "Port TCP",
-        "Vous n'avez pas encore de ping, cliquez sur Ajouter un équipement pour commencer": "Vous n'avez pas encore de ping, cliquez sur Ajouter un équipement pour commencer",
-        "Ajouter un Ping": "Ajouter un Ping"
+        "Supprimer": "Delete",
+        "Sauvegarder": "Save",
+        "Mes Pings": "My Pings",
+        "Port TCP": "TCP Port",
+        "Vous n'avez pas encore de ping, cliquez sur Ajouter un équipement pour commencer": "You have no PING yet, click on add an equipment to start",
+        "Ajouter un Ping": "Add a Ping"
     },
     "plugins\/ping\/desktop\/js\/ping.js": {
-        "Nom": "Nom",
-        "Historiser": "Historiser",
-        "Afficher": "Afficher",
-        "Tester": "Tester"
+        "Nom": "Name",
+        "Historiser": "Logging",
+        "Afficher": "Show",
+        "Tester": "Test"
     }
 }
