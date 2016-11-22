@@ -46,10 +46,10 @@ class ping extends eqLogic {
 		}
 		switch ($this->getConfiguration('mode')) {
 			case "Tcp":
-				if ( ! preg_match("/^[0-9]*$/", $this->getConfiguration('port')) )
+				if ( ! ereg('^[0-9]*$', $this->getConfiguration('port')) )
 				{
 					$port = getservbyname (strtolower($this->getConfiguration('port')), 'tcp');
-					if ( ! preg_match('![0-9]*!',($port)) )
+					if ( ! ereg('^[0-9]*$', $port) )
 					{
 						ajax::error(__('Erreur de Port (getservbyname)', __FILE__));
 						return false;
@@ -215,7 +215,7 @@ class ping extends eqLogic {
 			switch ($this->getConfiguration('mode')) {
 				case "Tcp":
 					log::add('ping','debug',"Test ".$this->getConfiguration('ip')." => ".$this->getConfiguration('port'));
-					if ( ! preg_match('![0-9]*!',$this->getConfiguration('port')) )
+					if ( ! ereg('^[0-9]*$',$this->getConfiguration('port')) )
 					{
 						$port = getservbyname(strtolower($this->getConfiguration('port')), 'tcp');
 					}
