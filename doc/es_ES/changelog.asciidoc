@@ -1,4 +1,6 @@
 [horizontal]
+WARNING: Detail complet des mises à jour sur https://github.com/guenneguezt/plugin-ping/commits/master[Historique Commit]
+
 1.7:: Prise en compte de l'application mobile.
 +
 Correction de bug de résolution DNS et de nom de port.
