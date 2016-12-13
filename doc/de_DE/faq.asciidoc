@@ -57,3 +57,8 @@ Ajouter la ligne :
 www-data ALL=NOPASSWD: /usr/bin/arp-scan
 ....
 --
+
+.J'aimerai remonter des erreurs/modifications directement dans le code ?
+--
+C'est tout à fait possible via https://github.com/guenneguezt/plugin-ping[github]
+--
