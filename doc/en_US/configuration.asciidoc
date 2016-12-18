@@ -1,4 +1,4 @@
-Nous allons maintenant paramétrer l'équipement. Pour se faire, cliquer sur *Plugins / Communicaton / ping*
+We will now set up the equipment. To do this, click on * Plugins / Communicaton / ping *
 
 Then define :
 

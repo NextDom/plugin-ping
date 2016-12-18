@@ -21,7 +21,7 @@ image::../images/ping_screenshot3.jpg[align="center"]
 [horizontal]
 - *ping* : Force un ping.
 
-=== Installation/Configuration
+=== Installation and Settings
 include::configuration.asciidoc[]
 
 === FAQ
