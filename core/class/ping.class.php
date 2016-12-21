@@ -46,12 +46,12 @@ class ping extends eqLogic {
 		}
 		switch ($this->getConfiguration('mode')) {
 			case "Tcp":
-				if ( ! preg_match('^[0-9]*$', $this->getConfiguration('port')) )
+				if ( ! preg_match('/^[0-9]*$/', $this->getConfiguration('port')) )
 				{
 					$port = getservbyname (strtolower($this->getConfiguration('port')), 'tcp');
-					if ( ! preg_match('^[0-9]*$', $port) )
+					if ( ! preg_match('/^[0-9]*$/', $port) )
 					{
-						ajax::error(__('Erreur de Port (getservbyname)', __FILE__));
+						ajax::error(__('Erreur de Port (getservbyname) '.$port, __FILE__));
 						return false;
 					}
 				}
@@ -215,7 +215,7 @@ class ping extends eqLogic {
 			switch ($this->getConfiguration('mode')) {
 				case "Tcp":
 					log::add('ping','debug',"Test ".$this->getConfiguration('ip')." => ".$this->getConfiguration('port'));
-					if ( ! preg_match('^[0-9]*$',$this->getConfiguration('port')) )
+					if ( ! preg_match('/^[0-9]*$/',$this->getConfiguration('port')) )
 					{
 						$port = getservbyname(strtolower($this->getConfiguration('port')), 'tcp');
 					}
@@ -223,7 +223,7 @@ class ping extends eqLogic {
 					{
 						$port = $this->getConfiguration('port');
 					}
-					if ( ! preg_match("^[1-9][0-9]{0,2}\.[0-9]{0,3}\.[0-9]{0,3}\.[0-9]{0,3}$", $this->getConfiguration('ip')) )
+					if ( ! preg_match("/^[1-9][0-9]{0,2}\.[0-9]{0,3}\.[0-9]{0,3}\.[0-9]{0,3}$/", $this->getConfiguration('ip')) )
 					{
 						$ip = gethostbyname($this->getConfiguration('ip'));
 					}
