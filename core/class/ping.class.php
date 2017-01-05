@@ -67,9 +67,9 @@ class ping extends eqLogic {
 				}
 				break;
 			case "Arp":
-				if ( ! preg_match("/^[0-9a-fA-F][0-9a-fA-F]:[0-9a-fA-F][0-9a-fA-F]:[0-9a-fA-F][0-9a-fA-F]:[0-9a-fA-F][0-9a-fA-F]:[0-9a-fA-F][0-9a-fA-F]:[0-9a-fA-F][0-9a-fA-F]$/", strtoupper($this->getConfiguration('mac'))) )
+				if ( ! preg_match("/^[0-9A-F][0-9A-F]:[0-9A-F][0-9A-F]:[0-9A-F][0-9A-F]:[0-9A-F][0-9A-F]:[0-9A-F][0-9A-F]:[0-9A-F][0-9A-F]$/", strtoupper($this->getConfiguration('mac'))) )
 				{
-					ajax::error(__('Erreur d\'adresse mac', __FILE__));
+					ajax::error(__('Erreur d\'adresse mac', __FILE__).'"'.strtoupper($this->getConfiguration('mac')).'"');
 					return false;
 				}
 				break;
