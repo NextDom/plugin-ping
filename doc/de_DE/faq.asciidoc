@@ -7,7 +7,7 @@ link:https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=VDCCCH
 
 .Quelle est la fréquence de rafraichissement des informations ?
 --
-Le plugin actualise les informations toutes les minutes.
+Das Plugin aktualisiert die Informationen in jeder Minute.
 --
 
 .Est-ce que le plugin met à jour l'état lors d'un ping forcé par le bouton ?

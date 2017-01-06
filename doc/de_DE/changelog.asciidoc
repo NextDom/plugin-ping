@@ -19,4 +19,4 @@ Changement de l'unité en µs.
 
 1.1:: Possibilité de mettre un port sous forme numerique.
 
-1.0:: Première version bêta.
+1.0:: Erste version beta.

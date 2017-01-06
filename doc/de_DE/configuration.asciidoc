@@ -2,9 +2,9 @@ Nous allons maintenant paramétrer l'équipement. Pour se faire, cliquer sur *Pl
 
 Puis définir :
 
-- Objet parent
+- Eltern Objekt
 - Catégorie (optionnelle)
-- Activer (coché par défaut)
+- Aktivieren (standardmäßig aktiviert)
 - Visible (optionel si vous ne désirez pas le rendre visible sur le Dashboard)
 - Mode de ping (Icmp, Arp, Tcp)
 - Adresse Mac a pinger
