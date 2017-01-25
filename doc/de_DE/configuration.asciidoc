@@ -1,12 +1,12 @@
 Nous allons maintenant paramétrer l'équipement. Pour se faire, cliquer sur *Plugins / Communicaton / ping*
 
-Puis définir :
+Dann definieren :
 
 - Eltern Objekt
-- Catégorie (optionnelle)
+- Kategorie (optional)
 - Aktivieren (standardmäßig aktiviert)
-- Visible (optionel si vous ne désirez pas le rendre visible sur le Dashboard)
-- Mode de ping (Icmp, Arp, Tcp)
+- Sichtbar (optional, wenn Sie nicht wünschen, dass es auf dem Armaturenbrett sichtbar ist)
+- Ping Modus (Arp, Icmp, Tcp)
 - Adresse Mac a pinger
 - IP a pinger
 - Port a pinger

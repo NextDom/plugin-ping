@@ -1,5 +1,5 @@
 [panel,primary]
-.Pourquoi le plugin est gratuit ?
+.Warum ist das Plugin kostenlos?
 --
 Ce plugin est gratuit pour que chacun puisse en profiter simplement. Si vous souhaitez tout de même faire un don au développeur du plugin, utilisez le lien suivant.
 link:https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=VDCCCHBA3CCSE[Faire un don au développeur du plugin]

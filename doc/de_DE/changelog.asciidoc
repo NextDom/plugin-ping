@@ -5,7 +5,7 @@ WARNING: Detail complet des mises à jour sur https://github.com/guenneguezt/plu
 +
 Correction de bug de résolution DNS et de nom de port.
 +
-Changement de l'unité en µs.
+Ändern der Einheit in µs.
 
 1.6:: Prise en charge de docker.
 
