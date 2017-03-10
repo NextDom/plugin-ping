@@ -1,30 +1,30 @@
 {
     "plugins\/ping\/desktop\/php\/ping.php": {
-        "Général": "Général",
-        "Nom de l'équipement": "Nom de l'équipement",
-        "Objet parent": "Objet parent",
-        "Aucun": "Aucun",
-        "Catégorie": "Catégorie",
-        "Activer": "Activer",
+        "Général": "General",
+        "Nom de l'équipement": "Nombre del dispositivo",
+        "Objet parent": "Objeto padre",
+        "Aucun": "Ninguno",
+        "Catégorie": "Categoría",
+        "Activer": "Activar",
          "Visible": "Visible",
-        "IP de l'équipement": "IP de l'équipement",
-        "Indicateurs": "Indicateurs",
-        "Nom": "Nom",
-        "Icône-action": "Icône-action",
-        "Sous-Type": "Sous-Type",
-        "Paramètres": "Paramètres",
-        "Action": "Action",
-        "Supprimer": "Supprimer",
-        "Sauvegarder": "Sauvegarder",
-        "Mes Pings": "Mes Pings",
-        "Port TCP": "Port TCP",
-        "Vous n'avez pas encore de ping, cliquez sur Ajouter un équipement pour commencer": "Vous n'avez pas encore de ping, cliquez sur Ajouter un équipement pour commencer",
-        "Ajouter un Ping": "Ajouter un Ping"
+        "IP de l'équipement": "Nombre del dispositivo",
+        "Indicateurs": "Indicadores",
+        "Nom": "Nombre",
+        "Icône-action": "Icono-acción",
+        "Sous-Type": "Subtipo",
+        "Paramètres": "Parámetros",
+        "Action": "Acción",
+        "Supprimer": "Borrar",
+        "Sauvegarder": "Salvar",
+        "Mes Pings": "Mis Pings",
+        "Port TCP": "Puerto TCP",
+        "Vous n'avez pas encore de ping, cliquez sur Ajouter un équipement pour commencer": "No tienes un dispositivo ping, haga clic en agragar dispositivo para iniciar",
+        "Ajouter un Ping": "Agregar un Ping"
     },
     "plugins\/ping\/desktop\/js\/ping.js": {
-        "Nom": "Nom",
-        "Historiser": "Historiser",
-        "Afficher": "Afficher",
-        "Tester": "Tester"
+        "Nom": "Nombre",
+        "Historiser": "Historizar",
+        "Afficher": "Mostrar",
+        "Tester": "Prueba"
     }
 }
