@@ -1,22 +1,19 @@
-[horizontal]
 WARNING: Detail complet des mises à jour sur https://github.com/guenneguezt/plugin-ping/commits/master[Historique Commit]
 
-1.7:: Prise en compte de l'application mobile.
-+
-Correction de bug de résolution DNS et de nom de port.
-+
-Ändern der Einheit in µs.
+Liste des évolutions majeures de la version courante :
 
-1.6:: Prise en charge de docker.
+- Modification pour compatibilité Jeedom V3
+- Plus de suivi de version
 
-1.5:: Ajout de cron indépendante.
+Anciennes évolutions :
 
-1.4:: Correction pour que le mode de ping soit bien affiché.
-
-1.3:: Prise en compte de l'interface bond0 pour les mini+.
-
-1.2:: Prise en compte du ping et requête Arp pour les plateformes supportantes.
-
-1.1:: Possibilité de mettre un port sous forme numerique.
-
-1.0:: Erste version beta.
+- Prise en compte de l'application mobile.
+- Correction de bug de résolution DNS et de nom de port.
+- Changement de l'unité en µs.
+- Prise en charge de docker.
+- Ajout de cron indépendante.
+- Correction pour que le mode de ping soit bien affiché.
+- Prise en compte de l'interface bond0 pour les mini+.
+- Prise en compte du ping et requête Arp pour les plateformes supportantes.
+- Possibilité de mettre un port sous forme numerique.
+- Première version bêta.
