@@ -239,6 +239,7 @@ class ping extends eqLogic {
 					 
 					if( $socket === false ) {
 						log::add('ping','debug',"Error ".$errno." => ".$errstr);
+						$delaicmd->event(0);
 						if ($statuscmd->execCmd() != 0) {
 							$statuscmd->setCollectDate('');
 							$statuscmd->event(0);
