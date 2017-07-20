@@ -6,7 +6,7 @@
         "Aucun": "None",
         "Catégorie": "Category",
         "Activer": "Enable",
-         "Visible": "Visible",
+        "Visible": "Visible",
         "IP de l'équipement": "Equipment IP",
         "Indicateurs": "Indicators",
         "Nom": "Name",
@@ -19,12 +19,29 @@
         "Mes Pings": "My Pings",
         "Port TCP": "TCP Port",
         "Vous n'avez pas encore de ping, cliquez sur Ajouter un équipement pour commencer": "You have no PING yet, click on add an equipment to start",
-        "Ajouter un Ping": "Add a Ping"
+        "Ajouter un Ping": "Add a Ping",
+        "Gestion": "Gestion",
+        "Configuration": "Configuration",
+        "Nom de la ping": "Nom de la ping",
+        "Mode": "Mode",
+        "Adresse MAC de l'équipement": "Adresse MAC de l'équipement",
+        "Icône": "Icône"
     },
     "plugins\/ping\/desktop\/js\/ping.js": {
         "Nom": "Name",
         "Historiser": "Logging",
         "Afficher": "Show",
-        "Tester": "Test"
+        "Tester": "Test",
+        "Sauvegarde réussie": "Sauvegarde réussie"
+    },
+    "plugins\/ping\/plugin_info\/info.json": {
+        "<ul><li>Pour les commandes pings :\nAjouter la ligne :\n      www-data ALL=NOPASSWD: \/bin\/ping<br><\/li><li>Pour les commandes arp :\nsudo apt-get install arp-scan\nsudo visudo -s\nAjouter la ligne :\n      www-data ALL=NOPASSWD: \/usr\/bin\/arp-scan<\/li><\/ul>": "<ul><li>Pour les commandes pings :\nAjouter la ligne :\n      www-data ALL=NOPASSWD: \/bin\/ping<br><\/li><li>Pour les commandes arp :\nsudo apt-get install arp-scan\nsudo visudo -s\nAjouter la ligne :\n      www-data ALL=NOPASSWD: \/usr\/bin\/arp-scan<\/li><\/ul>"
+    },
+    "plugins\/ping\/plugin_info\/configuration.php": {
+        "Commande ping": "Commande ping",
+        "Commande arp-scan": "Commande arp-scan",
+        "Detecter les programme ping et arp-scan": "Detecter les programme ping et arp-scan",
+        "Faire un don au développeur": "Faire un don au développeur",
+        "Faire un don via Paypal au développeur": "Faire un don via Paypal au développeur"
     }
 }
