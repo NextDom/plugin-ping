@@ -2,11 +2,12 @@ WARNING: Detail complet des mises à jour sur https://github.com/guenneguezt/plu
 
 Liste des évolutions majeures de la version courante :
 
-- Modification pour compatibilité Jeedom V3
-- Plus de suivi de version
+- Suppression du lien Paypal pour être conforme avec Jeedom V3.1
 
 Anciennes évolutions :
 
+- Modification pour compatibilité Jeedom V3
+- Plus de suivi de version
 - Prise en compte de l'application mobile.
 - Correction de bug de résolution DNS et de nom de port.
 - Changement de l'unité en µs.
