@@ -40,8 +40,6 @@
     "plugins\/ping\/plugin_info\/configuration.php": {
         "Commande ping": "Comando ping",
         "Commande arp-scan": "Comando arp-scan",
-        "Detecter les programme ping et arp-scan": "Detectar los programas ping y arp-scan",
-        "Faire un don au développeur": "Hacer una donación al desarrollador",
-        "Faire un don via Paypal au développeur": "Hacer una donación vía Paypal al desarrollador"
+        "Detecter les programme ping et arp-scan": "Detectar los programas ping y arp-scan"
     }
 }
