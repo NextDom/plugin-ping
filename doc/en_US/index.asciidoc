@@ -3,7 +3,7 @@
 === Introduction
 Ce plugin permet de pinguer un équipement en TCP, ICMP et ARP.
 Il permet donc de tester des services genre http, mysql, smb, ...
-[http://fr.wikipedia.org/wiki/Liste_de_ports_logiciels Liste complète]
+http://fr.wikipedia.org/wiki/Liste_de_ports_logiciels[Liste complète]
 
 image::../images/ping_screenshot1.jpg[align="center"]
 

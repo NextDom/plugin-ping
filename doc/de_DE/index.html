@@ -424,7 +424,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_mögliche_aktion">1.1.3. Mögliche Aktion :</a></li>
 </ul>
 </li>
-<li><a href="#_installation_konfiguration">1.2. Installation/Konfiguration</a></li>
+<li><a href="#_installation_konfiguration">1.2. Installation/Konfiguration</a>
+<ul class="sectlevel3">
+<li><a href="#_icmp">1.2.1. ICMP</a></li>
+<li><a href="#_arp">1.2.2. ARP</a></li>
+<li><a href="#_tcp">1.2.3. TCP</a></li>
+</ul>
+</li>
 <li><a href="#_faq">1.3. FAQ</a></li>
 <li><a href="#_changelog">1.4. Changelog</a></li>
 </ul>
@@ -440,11 +446,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h3 id="_präsentation">1.1. Präsentation</h3>
 <div class="paragraph">
 <p>Ce plugin permet de pinguer un équipement en TCP, ICMP et ARP.
-Il permet donc de tester des services genre http, mysql, smb, &#8230;&#8203;</p>
+Il permet donc de tester des services genre http, mysql, smb, &#8230;&#8203;
+<a href="http://fr.wikipedia.org/wiki/Liste_de_ports_logiciels">Liste complète</a></p>
 </div>
 <div class="imageblock" style="text-align: center">
 <div class="content">
-<img src="../images/ping_screenshot1.jpg" alt="http://fr.wikipedia.org/wiki/Liste_de_ports_logiciels Liste complète">
+<img src="../images/ping_screenshot1.jpg" alt="ping screenshot1">
 </div>
 </div>
 <div class="sect3">
@@ -485,10 +492,10 @@ Il permet donc de tester des services genre http, mysql, smb, &#8230;&#8203;</p>
 <div class="sect2">
 <h3 id="_installation_konfiguration">1.2. Installation/Konfiguration</h3>
 <div class="paragraph">
-<p>Nous allons maintenant paramétrer l&#8217;équipement. Pour se faire, cliquer sur <strong>Plugins / Communicaton / ping</strong></p>
+<p>Nous allons maintenant paramétrer l&#8217;équipement. Pour se faire, cliquer sur <strong>Plugins / Communication / Ping</strong></p>
 </div>
 <div class="paragraph">
-<p>Dann definieren :</p>
+<p>Puis définir les informations de l&#8217;équipement :</p>
 </div>
 <div class="ulist">
 <ul>
@@ -496,25 +503,25 @@ Il permet donc de tester des services genre http, mysql, smb, &#8230;&#8203;</p>
 <p>Eltern Objekt</p>
 </li>
 <li>
-<p>Kategorie (optional)</p>
+<p>Catégorie (optionnel)</p>
 </li>
 <li>
 <p>Aktivieren (standardmäßig aktiviert)</p>
 </li>
 <li>
-<p>Sichtbar (optional, wenn Sie nicht wünschen, dass es auf dem Armaturenbrett sichtbar ist)</p>
+<p>Visible (optionnel si vous ne désirez pas le rendre visible sur le Dashboard)</p>
 </li>
 <li>
-<p>Ping Modus (Arp, Icmp, Tcp)</p>
+<p>Mode du ping (ARP, ICMP, TCP)</p>
 </li>
 <li>
-<p>Adresse Mac a pinger</p>
+<p>Adresse Mac à pinger</p>
 </li>
 <li>
-<p>IP a pinger</p>
+<p>IP de l&#8217;équipement à pinger</p>
 </li>
 <li>
-<p>Port a pinger</p>
+<p>Port à pinger</p>
 </li>
 </ul>
 </div>
@@ -524,7 +531,73 @@ Il permet donc de tester des services genre http, mysql, smb, &#8230;&#8203;</p>
 </div>
 </div>
 <div class="paragraph">
-<p>Et pour finir, cliquer sur Sauvegarder</p>
+<p>Et pour finir, cliquer sur Sauvegarder.</p>
+</div>
+<div class="paragraph">
+<p>Détails sur les protocoles réseaux disponibles :</p>
+</div>
+<div class="sect3">
+<h4 id="_icmp">1.2.1. ICMP</h4>
+<div class="paragraph">
+<p>C&#8217;est le mode officiel du ping. Il s&#8217;agit d&#8217;une interrogation de la couche IP.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://fr.wikipedia.org/wiki/Internet_Control_Message_Protocol">Plus d&#8217;information sur wikipedia</a></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_arp">1.2.2. ARP</h4>
+<div class="paragraph">
+<p>Dans ce mode, on interroge le routeur pour savoir s&#8217;il connait l&#8217;adresse IP d&#8217;un équipement dont on a fourni l&#8217;adresse MAC. S&#8217;il répond c&#8217;est qu&#8217;il connait l&#8217;équipement dans sa table ARP et donc que l&#8217;équipement a communiqué récemment.
+Ce mode est très utile pour les équipements dont la connexion n&#8217;est pas persistante (comme les téléphones portables).</p>
+</div>
+<div class="paragraph">
+<p><a href="https://fr.wikipedia.org/wiki/Address_Resolution_Protocol">Plus d&#8217;information sur wikipedia</a></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_tcp">1.2.3. TCP</h4>
+<div class="paragraph">
+<p>Dans ce mode, on va interroger un service hébergé par la machine distante. En fonction de l&#8217;équipement, le service à utiliser doit être adapté. En effet, ce mode permet de savoir si la machine est présente sur le réseau mais aussi si le service est activé.
+Voici une liste de services :</p>
+</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Protocole</th>
+<th class="tableblock halign-left valign-top">Port</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">http</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">80</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ftp</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">21</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">https</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">443</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mysql</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3306</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><a href="https://fr.wikipedia.org/wiki/Liste_de_ports_logiciels">Liste complète</a></p>
+</div>
 </div>
 </div>
 <div class="sect2">
