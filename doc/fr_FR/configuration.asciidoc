@@ -1,35 +1,35 @@
-Nous allons maintenant paramétrer l'équipement. Pour se faire, cliquer sur *Plugins / Communicaton / ping*
+Nous allons maintenant paramétrer l'équipement. Pour se faire, cliquer sur *Plugins / Communication / Ping*
 
-Puis définir :
+Puis définir les informations de l'équipement :
 
 - Objet parent
-- Catégorie (optionnelle)
+- Catégorie (optionnel)
 - Activer (coché par défaut)
-- Visible (optionel si vous ne désirez pas le rendre visible sur le Dashboard)
-- Mode de ping (Icmp, Arp, Tcp)
-- Adresse Mac a pinger
-- IP a pinger
-- Port a pinger
+- Visible (optionnel si vous ne désirez pas le rendre visible sur le Dashboard)
+- Mode du ping (ARP, ICMP, TCP)
+- Adresse Mac à pinger
+- IP de l'équipement à pinger
+- Port à pinger
 
 image::../images/ping_screenshot2.jpg[align="center"]
 Et pour finir, cliquer sur Sauvegarder.
 
-Détail sur les protocoles réseau disponible :
+Détails sur les protocoles réseaux disponibles :
 
-==== Icmp
-C'est le mode officiel du ping. Il s'agit d'une intérrogation de la couche IP.
+==== ICMP
+C'est le mode officiel du ping. Il s'agit d'une interrogation de la couche IP.
 
 https://fr.wikipedia.org/wiki/Internet_Control_Message_Protocol[Plus d'information sur wikipedia]
 
-==== Arp
-Dans ce mode, on intérroge le routeur pour savoir s'il connait l'adresse IP d'un équipement dont on fourni l'adresse MAC. S'il répond c'est qu'il connait l'équipement dans ça table ARP et donc que l'équipement a communiqué récement.
-Ce mode est très utile pour les équipements dont la connexion n'est pas persistante (genre les téléphones portables).
+==== ARP
+Dans ce mode, on interroge le routeur pour savoir s'il connait l'adresse IP d'un équipement dont on a fourni l'adresse MAC. S'il répond c'est qu'il connait l'équipement dans sa table ARP et donc que l'équipement a communiqué récemment.
+Ce mode est très utile pour les équipements dont la connexion n'est pas persistante (comme les téléphones portables).
 
 https://fr.wikipedia.org/wiki/Address_Resolution_Protocol[Plus d'information sur wikipedia]
 
-==== Tcp
-Dans ce mode, on va intérroger un service hébergé par la machine distante. En fonction de l'équipement, le service à utiliser doit être adapté. En effet, ce mode permet de savoir si la machine est présente sur le réseau mais aussi si le service est activé.
-Voici une liste de service :
+==== TCP
+Dans ce mode, on va interroger un service hébergé par la machine distante. En fonction de l'équipement, le service à utiliser doit être adapté. En effet, ce mode permet de savoir si la machine est présente sur le réseau mais aussi si le service est activé.
+Voici une liste de services :
 
 [width="100%",options="header"]
 |====================
