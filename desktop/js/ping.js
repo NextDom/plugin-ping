@@ -93,18 +93,21 @@ $(function(){
 			$("#port").hide();
 			$("#ip").show();
 			$("#mac").hide();
+			$("#interface").hide();
 		}
 		else if ( $(this).val() == 'Arp' )
 		{
 			$("#port").hide();
 			$("#ip").hide();
 			$("#mac").show();
+			$("#interface").show();
 		}
 		else
 		{
 			$("#ip").show();
 			$("#mac").hide();
 			$("#port").show();
+			$("#interface").hide();
 		}
 	})
 })
@@ -122,18 +125,21 @@ function printEqLogic(_eqLogic) {
 			$("#port").hide();
 			$("#ip").show();
 			$("#mac").hide();
+			$("#interface").hide();
 		}
 		else if ( _eqLogic.configuration.mode == 'Arp' )
 		{
 			$("#port").hide();
 			$("#ip").hide();
 			$("#mac").show();
+			$("#interface").show();
 		}
 		else
 		{
 			$("#ip").show();
 			$("#mac").hide();
 			$("#port").show();
+			$("#interface").hide();
 		}
 	}
 	else
@@ -142,6 +148,7 @@ function printEqLogic(_eqLogic) {
 		$("#ip").show();
 		$("#mac").hide();
 		$("#port").show();
+		$("#interface").hide();
 	}
 }
 

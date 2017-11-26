@@ -256,7 +256,7 @@ class ping extends eqLogic {
 					}
 					break;
 				case "Icmp":
-					$lastligne = exec(config::byKey('cmd_ping', 'ping').' '.$this->getConfiguration('ip').' 2>&1', $reurn, $code);
+					$lastligne = exec(config::byKey('cmd_ping', 'ping').' -c2 -q '.$this->getConfiguration('ip').' 2>&1', $reurn, $code);
 					if ( $code == 0 )
 					{
 						log::add('ping','debug','Code :'.$code.' - Ok');
@@ -287,8 +287,16 @@ class ping extends eqLogic {
 					}
 					break;
 				case "Arp":
-					$lastligne = exec(config::byKey('cmd_arp', 'ping').' '.$this->getConfiguration('mac').' 2>&1', $return, $code);
 					log::add('ping','debug','Search '.$this->getConfiguration('mac'));
+					$cmd = config::byKey('cmd_arp', 'ping');
+					$cmd .= " -l -g --retry=5 -t 800";
+					if ( $this->getConfiguration('interface') != "" )
+					{
+						$cmd .= ' -I '.$this->getConfiguration('interface');
+					}
+					$cmd .= ' -T '.$this->getConfiguration('mac').' 2>&1';
+					log::add('ping','debug',$cmd);
+					$lastligne = exec($cmd, $return, $code);
 					log::add('ping','debug','Retour commande '.join("\n", $return));
 					if ( preg_match("/\t".strtolower($this->getConfiguration('mac'))."\t/", strtolower(join("\n", $return))) )
 					{
@@ -310,11 +318,11 @@ class ping extends eqLogic {
 	}
 
     public static function GetPingCmd() {
-		foreach(array('sudo ping -c2 -q', 'ping -c2 -q') as $cmd)
+		foreach(array('sudo ping', 'ping') as $cmd)
 		{
 			log::add('ping','debug','Essai la commande pour ping :'.$cmd);
 			unset($return);
-			$lastligne = exec($cmd.' 127.0.0.1 2>&1', $return, $code);
+			$lastligne = exec($cmd.' -c2 -q 127.0.0.1 2>&1', $return, $code);
 			log::add('ping','debug','Code :'.$code);
 			log::add('ping','debug','Return :'.join(" | ",$return));
 			if ( $code == 0 )
@@ -326,16 +334,16 @@ class ping extends eqLogic {
     }
 
     public static function GetArpCmd() {
-		foreach(array('sudo /usr/bin/arp-scan -l', 'sudo /usr/bin/arp-scan -I bond0 -l', 'sudo /usr/bin/arp-scan -I docker0 -l') as $cmd)
+		foreach(array('sudo /usr/bin/arp-scan') as $cmd)
 		{
 			log::add('ping','debug','Essai la commande pour arp :'.$cmd);
 			unset($return);
-			$lastligne = exec($cmd.' 2>&1', $return, $code);
+			$lastligne = exec($cmd.' -l 2>&1', $return, $code);
 			log::add('ping','debug','Code :'.$code);
 			log::add('ping','debug','Return :'.join(" | ",$return));
 			if ( $code == 0 )
 			{
-				return $cmd." -g --retry=5 -t 800 -T ";
+				return $cmd;
 			}
 		}
 		return false;

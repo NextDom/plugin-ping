@@ -47,6 +47,7 @@ function ping_update() {
         $cron->setSchedule('* * * * *');
         $cron->save();
 	}
+	log::add('ping','error',__('Les commandes utilisées par le plugin doivent être reconfigurées dans le menu de gestion du plugin.',__FILE__));
 	foreach (eqLogic::byType('ping') as $eqLogic) {
 		$eqLogic->save();
 	}

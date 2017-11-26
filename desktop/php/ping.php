@@ -133,6 +133,15 @@ sendVarToJS('eqType', 'ping');
                         <input type="text" class="eqLogicAttr form-control" data-l1key="configuration" data-l2key="mac"/>
                     </div>
                 </div>
+                <div class="form-group" id=interface>
+                    <label class="col-lg-2 control-label">{{Interface de recherche}}</label>
+                    <div class="col-lg-3">
+                        <input type="text" class="eqLogicAttr form-control" data-l1key="configuration" data-l2key="interface"/>
+                    </div>
+					<div class="col-lg-3">
+					{{Utile uniquement lorsque votre Jeedom possède plusieurs interfaces réseaux}}
+					</div>
+				</div>
                 <div class="form-group" id="port">
                     <label class="col-lg-2 control-label">{{Port TCP}}</label>
                     <div class="col-lg-3">
