@@ -1,6 +1,6 @@
 WARNING: Detail complet des mises à jour sur https://github.com/guenneguezt/plugin-ping/commits/master[Historique Commit]
 
-Liste des évolutions majeures de la version courante :
+Liste der wichtigsten Änderungen in der aktuellen Version :
 
 - Ajout de la possibilité de choisir l'interface pour les équipements de type arp.
 
@@ -18,4 +18,4 @@ Anciennes évolutions :
 - Prise en compte de l'interface bond0 pour les mini+.
 - Prise en compte du ping et requête Arp pour les plateformes supportantes.
 - Possibilité de mettre un port sous forme numerique.
-- Première version bêta.
+- Erste beta Version
