@@ -6,8 +6,8 @@ Liste der wichtigsten Änderungen in der aktuellen Version :
 
 Anciennes évolutions :
 
-- Suppression du lien Paypal pour être conforme avec Jeedom V3.1
-- Modification pour compatibilité Jeedom V3
+- Der Paypal-Link wurde entfernt, um mit Jeedom V3.1 konform zu sein
+- Änderungen um mit Jeedom V3 kompatiebel zu sein
 - Plus de suivi de version
 - Prise en compte de l'application mobile.
 - Correction de bug de résolution DNS et de nom de port.
