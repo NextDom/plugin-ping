@@ -20,11 +20,11 @@
         "Port TCP": "TCP Port",
         "Vous n'avez pas encore de ping, cliquez sur Ajouter un équipement pour commencer": "Sie haben noch kein Ping, klicken Sie erst einmal auf \"Ping hinzufügen\"",
         "Ajouter un Ping": "Ping hinzufügen",
-        "Gestion": "Gestion",
-        "Configuration": "Configuration",
-        "Nom de la ping": "Nom de la ping",
+        "Gestion": "Verwaltung",
+        "Configuration": "Konfiguration",
+        "Nom de la ping": "Ping Name",
         "Mode": "Mode",
-        "Adresse MAC de l'équipement": "Adresse MAC de l'équipement",
+        "Adresse MAC de l'équipement": "MAC Geräteadresse",
         "Icône": "Icône"
     },
     "plugins\/ping\/desktop\/js\/ping.js": {
@@ -38,8 +38,8 @@
         "<ul><li>Pour les commandes pings :\nAjouter la ligne :\n      www-data ALL=NOPASSWD: \/bin\/ping<br><\/li><li>Pour les commandes arp :\nsudo apt-get install arp-scan\nsudo visudo -s\nAjouter la ligne :\n      www-data ALL=NOPASSWD: \/usr\/bin\/arp-scan<\/li><\/ul>": "<ul><li>Pour les commandes pings :\nAjouter la ligne :\n      www-data ALL=NOPASSWD: \/bin\/ping<br><\/li><li>Pour les commandes arp :\nsudo apt-get install arp-scan\nsudo visudo -s\nAjouter la ligne :\n      www-data ALL=NOPASSWD: \/usr\/bin\/arp-scan<\/li><\/ul>"
     },
     "plugins\/ping\/plugin_info\/configuration.php": {
-        "Commande ping": "Commande ping",
-        "Commande arp-scan": "Commande arp-scan",
+        "Commande ping": "ping Befehl",
+        "Commande arp-scan": "arp-scan Befehl",
         "Detecter les programme ping et arp-scan": "Detecter les programme ping et arp-scan"
     }
 }

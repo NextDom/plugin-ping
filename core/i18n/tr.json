@@ -1,0 +1,45 @@
+{
+    "plugins\/ping\/desktop\/php\/ping.php": {
+        "Général": "Général",
+        "Nom de l'équipement": "Nom de l'équipement",
+        "Objet parent": "Objet parent",
+        "Aucun": "Aucun",
+        "Catégorie": "Catégorie",
+        "Activer": "Activer",
+        "Visible": "Visible",
+        "IP de l'équipement": "IP de l'équipement",
+        "Indicateurs": "Indicateurs",
+        "Nom": "Nom",
+        "Icône-action": "Icône-action",
+        "Sous-Type": "Sous-Type",
+        "Paramètres": "Paramètres",
+        "Action": "Action",
+        "Supprimer": "Supprimer",
+        "Sauvegarder": "Sauvegarder",
+        "Mes Pings": "Mes Pings",
+        "Port TCP": "Port TCP",
+        "Vous n'avez pas encore de ping, cliquez sur Ajouter un équipement pour commencer": "Vous n'avez pas encore de ping, cliquez sur Ajouter un équipement pour commencer",
+        "Ajouter un Ping": "Ajouter un Ping",
+        "Gestion": "Gestion",
+        "Configuration": "Configuration",
+        "Nom de la ping": "Nom de la ping",
+        "Mode": "Mode",
+        "Adresse MAC de l'équipement": "Adresse MAC de l'équipement",
+        "Icône": "Icône"
+    },
+    "plugins\/ping\/desktop\/js\/ping.js": {
+        "Nom": "Nom",
+        "Historiser": "Historiser",
+        "Afficher": "Afficher",
+        "Tester": "Tester",
+        "Sauvegarde réussie": "Sauvegarde réussie"
+    },
+    "plugins\/ping\/plugin_info\/info.json": {
+        "<ul><li>Pour les commandes pings :\nAjouter la ligne :\n      www-data ALL=NOPASSWD: \/bin\/ping<br><\/li><li>Pour les commandes arp :\nsudo apt-get install arp-scan\nsudo visudo -s\nAjouter la ligne :\n      www-data ALL=NOPASSWD: \/usr\/bin\/arp-scan<\/li><\/ul>": "<ul><li>Pour les commandes pings :\nAjouter la ligne :\n      www-data ALL=NOPASSWD: \/bin\/ping<br><\/li><li>Pour les commandes arp :\nsudo apt-get install arp-scan\nsudo visudo -s\nAjouter la ligne :\n      www-data ALL=NOPASSWD: \/usr\/bin\/arp-scan<\/li><\/ul>"
+    },
+    "plugins\/ping\/plugin_info\/configuration.php": {
+        "Commande ping": "Commande ping",
+        "Commande arp-scan": "Commande arp-scan",
+        "Detecter les programme ping et arp-scan": "Detecter les programme ping et arp-scan"
+    }
+}
