@@ -15,7 +15,7 @@
         "Paramètres": "Parámetros",
         "Action": "Acción",
         "Supprimer": "Borrar",
-        "Sauvegarder": "Salvar",
+        "Sauvegarder": "Guardar",
         "Mes Pings": "Mis Pings",
         "Port TCP": "Puerto TCP",
         "Vous n'avez pas encore de ping, cliquez sur Ajouter un équipement pour commencer": "No tienes un dispositivo ping, haga clic en agragar dispositivo para iniciar",
@@ -32,7 +32,7 @@
         "Historiser": "Historizar",
         "Afficher": "Mostrar",
         "Tester": "Prueba",
-        "Sauvegarde réussie": "Salvado con exito"
+        "Sauvegarde réussie": "Guardado con exito"
     },
     "plugins\/ping\/plugin_info\/info.json": {
         "<ul><li>Pour les commandes pings :\nAjouter la ligne :\n      www-data ALL=NOPASSWD: \/bin\/ping<br><\/li><li>Pour les commandes arp :\nsudo apt-get install arp-scan\nsudo visudo -s\nAjouter la ligne :\n      www-data ALL=NOPASSWD: \/usr\/bin\/arp-scan<\/li><\/ul>": "<ul><li>Para los comandos pings :\nAgregar línea :\n      www-data ALL=NOPASSWD: /bin/ping<br></li><li>Para el comando arpp :\nsudo apt-get install arp-scan\nsudo visudo -s\nAgregar la línea :\n      www-data ALL=NOPASSWD: /usr/bin/arp-scan</li></ul>"
