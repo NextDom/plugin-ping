@@ -14,18 +14,18 @@ Le plugin actualise les informations toutes les minutes.
 Non, il ne met à jour l'état que si celui-ci change.
 --
 
-.Pour le port, est-ce que l'on peut mettre le numéro du port que l'on veut où juste des noms (http, ...., )
+.Pour le port, est-ce que l'on peut mettre le numéro du port que l'on veut ou juste des noms (http, ...., )
 --
 Oui, depuis la version 1.1
 --
 
-.Quel est la liste des noms reconnus ?
+.Quelle est la liste des noms reconnus ?
 --
-La liste des noms de port reconnu dépend de votre système mais elle correspond globalement à ce que vous trouverez sur le lien ci dessous :
+La liste des noms de port reconnus dépend de votre système mais elle correspond globalement à ce que vous trouverez sur le lien ci-dessous :
 [http://fr.wikipedia.org/wiki/Liste_de_ports_logiciels Liste complète]
 --
 
-.Quel port TCP pour quel type d'équipement (liste non exhaustive ?
+.Quel port TCP pour quel type d'équipement (liste non exhaustive) ?
 --
 |=======
 |Type d'équipement |Port
@@ -38,7 +38,7 @@ La liste des noms de port reconnu dépend de votre système mais elle correspond
 |=======
 --
 
-.Pourquoi Arp et Icmp ne sont pas accesible ?
+.Pourquoi Arp et Icmp ne sont pas accessibles ?
 --
 - Pour les commandes pings :
 Ajouter la ligne :
@@ -57,7 +57,7 @@ www-data ALL=NOPASSWD: /usr/bin/arp-scan
 ....
 --
 
-.J'aimerai remonter des erreurs/modifications directement dans le code ?
+.J'aimerais remonter des erreurs/modifications directement dans le code ?
 --
 C'est tout à fait possible via https://github.com/guenneguezt/plugin-ping[github]
 --
