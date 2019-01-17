@@ -1,4 +1,4 @@
-Nous allons maintenant paramétrer l'équipement. Pour se faire, cliquer sur *Plugins / Communication / Ping*
+Nous allons maintenant paramétrer l'équipement. Pour ce faire, cliquer sur *Plugins / Communication / Ping*
 
 Puis définir les informations de l'équipement :
 
@@ -22,7 +22,7 @@ C'est le mode officiel du ping. Il s'agit d'une interrogation de la couche IP.
 https://fr.wikipedia.org/wiki/Internet_Control_Message_Protocol[Plus d'information sur wikipedia]
 
 ==== ARP
-Dans ce mode, on interroge le routeur pour savoir s'il connait l'adresse IP d'un équipement dont on a fourni l'adresse MAC. S'il répond c'est qu'il connait l'équipement dans sa table ARP et donc que l'équipement a communiqué récemment.
+Dans ce mode, on interroge le routeur pour savoir s'il connait l'adresse IP d'un équipement dont on a fourni l'adresse MAC. S'il répond, c'est qu'il connaît l'équipement dans sa table ARP et donc que l'équipement a communiqué récemment.
 Ce mode est très utile pour les équipements dont la connexion n'est pas persistante (comme les téléphones portables).
 
 https://fr.wikipedia.org/wiki/Address_Resolution_Protocol[Plus d'information sur wikipedia]
