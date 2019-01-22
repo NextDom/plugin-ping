@@ -17,14 +17,12 @@
  */
 
 /* * ***************************Includes********************************* */
-require_once dirname(__FILE__) . '/../../../../core/php/core.inc.php';
+require_once __DIR__ . '/../../../../core/php/core.inc.php';
 
 class ping extends eqLogic {
-    /*     * *************************Attributs****************************** */
 
-    /*     * ***********************Methode static*************************** */
-
-	public static function pull() {
+	public static function pull() 
+	{
 		log::add('ping','debug','Cron start');
 		foreach (self::byType('ping') as $eqLogic) {
 			$eqLogic->ping();
@@ -136,9 +134,7 @@ class ping extends eqLogic {
 			$cmd->setDisplay('icon','<i class="icon techno-fleches"></i>');
 			$cmd->setDisplay('generic_type','GENERIC_ACTION');
 			$cmd->save();
-		}
-		else
-		{
+		} else {
 			if ( $cmd->getDisplay('generic_type') == "" )
 			{
 				$cmd->setDisplay('icon','<i class="icon techno-fleches"></i>');
@@ -218,17 +214,13 @@ class ping extends eqLogic {
 					if ( ! preg_match('/^[0-9]*$/',$this->getConfiguration('port')) )
 					{
 						$port = getservbyname(strtolower($this->getConfiguration('port')), 'tcp');
-					}
-					else
-					{
+					} else {
 						$port = $this->getConfiguration('port');
 					}
 					if ( ! preg_match("/^[1-9][0-9]{0,2}\.[0-9]{0,3}\.[0-9]{0,3}\.[0-9]{0,3}$/", $this->getConfiguration('ip')) )
 					{
 						$ip = gethostbyname($this->getConfiguration('ip'));
-					}
-					else
-					{
+					} else {
 						$ip = $this->getConfiguration('ip');
 					}
 					log::add('ping','debug',"Test reel ".$ip." => ".$port);
@@ -317,7 +309,8 @@ class ping extends eqLogic {
 		}
 	}
 
-    public static function GetPingCmd() {
+    public static function GetPingCmd() 
+    {
 		foreach(array('sudo ping', 'ping') as $cmd)
 		{
 			log::add('ping','debug','Essai la commande pour ping :'.$cmd);
@@ -333,7 +326,8 @@ class ping extends eqLogic {
 		return false;
     }
 
-    public static function GetArpCmd() {
+    public static function GetArpCmd() 
+    {
 		foreach(array('sudo /usr/bin/arp-scan') as $cmd)
 		{
 			log::add('ping','debug','Essai la commande pour arp :'.$cmd);
@@ -352,19 +346,11 @@ class ping extends eqLogic {
 
 class pingCmd extends cmd 
 {
-    /*     * *************************Attributs****************************** */
 
-
-    /*     * ***********************Methode static*************************** */
-
-
-    /*     * *********************Methode d'instance************************* */
-
-    /*     * **********************Getteur Setteur*************************** */
     public function execute($_options = null) {
 		$eqLogic = $this->getEqLogic();
         if (!is_object($eqLogic) || $eqLogic->getIsEnable() != 1) {
-            throw new Exception(__('Equipement desactivé impossible d\éxecuter la commande : ' . $this->getHumanName(), __FILE__));
+            throw new \Exception(__('Equipement desactivé impossible d\éxecuter la commande : ' . $this->getHumanName(), __FILE__));
         }
 		switch ($this->getLogicalId()) {
 			case "ping":
@@ -374,4 +360,4 @@ class pingCmd extends cmd
         return true;
     }
 }
-?>
+
